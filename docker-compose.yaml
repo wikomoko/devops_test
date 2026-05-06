@@ -1,9 +1,7 @@
 services:
-  hello-web:
+  nginx:
     image: nginx:alpine
-    container_name: hello-web
+    container_name: hello-nginx
     restart: unless-stopped
     ports:
       - "8088:80"
-    volumes:
-      - ./html:/usr/share/nginx/html:ro
